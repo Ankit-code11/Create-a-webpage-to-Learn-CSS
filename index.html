@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Sikho – A to Z Guide</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<nav>
+  <div class="nav-logo">CSS SIKHO</div>
+  <div class="nav-links">
+    <a href="#hero">Home</a>
+    <a href="#topic-1">Basics</a>
+    <a href="#topic-5">Layout</a>
+    <a href="#topic-8">Animation</a>
+  </div>
+  <div class="progress-bar-wrap">
+    <span id="prog-text">0 / 12 Done</span>
+    <div class="prog-bar">
+      <div class="prog-fill" id="prog-fill"></div>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-tag">🎬 A to Z CSS Course — Free</div>
+  <h1>CSS<br/><span>SIKHO</span></h1>
+  <p>Dekhkar seekho — har topic mein live demo, code example, aur simple Hindi explanation. Beginner se Pro tak.</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">12</div><div class="stat-label">Topics</div></div>
+    <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Examples</div></div>
+    <div class="stat"><div class="stat-num">0₹</div><div class="stat-label">Bilkul Free</div></div>
+  </div>
+  <button class="start-btn" onclick="document.getElementById('learn').scrollIntoView({behavior:'smooth'})">
+    ▶ Seekhna Shuru Karo
+  </button>
+</section>
+
+<!-- ══ LEARN LAYOUT ══ -->
+<div class="learn-layout" id="learn">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-label">Topics</div>
+    <div class="sidebar-item active" onclick="goTo('topic-1',this)" id="side-1">
+      <span class="num">01</span> Colors & Background<span class="done-tick">✓</span>
+    </div>
+    <div class="sidebar-item" onclick="goTo('topic-2',this)" id="side-2">
+      <span class="num">02</span> Box Model<span class="done-tick">✓</span>
+    </div>
+    <div class="sidebar-item" onclick="goTo('topic-3',this)" id="side-3">
+      <span class="num">03</span> Typography<span class="done-tick">✓</span>
+    </div>
+    <div class="sidebar-item" onclick="goTo('topic-4',this)" id="side-4">
+      <span class="num">04</span> Selectors<span class="done-tick">✓</span>
+    </div>
+    <div class="sidebar-item" onclick="goTo('topic-5',this)" id="side-5">
+      <span class="num">05</span> Flexbox<span class="done-tick">✓</span>
+    </div>
+    <div class="sidebar-item" onclick="goTo('topic-6',this)" id="side-6">
+      <span class="num">06</span> CSS Grid<span class="done-tick">✓</span>
+    </div>
+    <div class="sidebar-item" onclick="goTo('topic-7',this)" id="side-7">
+      <span class="num">07</span> Position<span class="done-tick">✓</span>
+    </div>
+    <div class="sidebar-item" onclick="goTo('topic-8',this)" id="side-8">
+      <span class="num">08</span> Transitions<span class="done-tick">✓</span>
+    </div>
+    <div class="sidebar-item" onclick="goTo('topic-9',this)" id="side-9">
+      <span class="num">09</span> Animations<span class="done-tick">✓</span>
+    </div>
+    <div class="sidebar-item" onclick="goTo('topic-10',this)" id="side-10">
+      <span class="num">10</span> Borders & Shadows<span class="done-tick">✓</span>
+    </div>
+    <div class="sidebar-item" onclick="goTo('topic-11',this)" id="side-11">
+      <span class="num">11</span> Gradients<span class="done-tick">✓</span>
+    </div>
+    <div class="sidebar-item" onclick="goTo('topic-12',this)" id="side-12">
+      <span class="num">12</span> Media Queries<span class="done-tick">✓</span>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <!-- ── 01: COLORS ── -->
+    <section class="topic-section" id="topic-1" style="animation-delay:.05s">
+      <div class="topic-header">
+        <div class="topic-num">01</div>
+        <div class="topic-title-wrap">
+          <div class="topic-badge">Chapter 1 · Basics</div>
+          <div class="topic-title">Colors & Background</div>
+        </div>
+      </div>
+      <p class="topic-desc">CSS mein color dene ke kai tarike hain — naam se, hex code se, rgb se, aur hsl se. Background pe bhi color, image, ya gradient laga sakte ho.</p>
+      <div class="code-block">
+        <div class="code-top"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span><span class="code-lang">CSS</span></div>
+        <pre>
+<span class="sel">div</span> {
+  <span class="prop">color</span>: <span class="val">red</span>;                    <span class="cm">/* naam se */</span>
+  <span class="prop">color</span>: <span class="val">#e50914</span>;              <span class="cm">/* hex code */</span>
+  <span class="prop">color</span>: <span class="val">rgb(229, 9, 20)</span>;       <span class="cm">/* rgb */</span>
+  <span class="prop">color</span>: <span class="val">rgba(229, 9, 20, 0.5)</span>; <span class="cm">/* rgba – transparency */</span>
+  <span class="prop">background-color</span>: <span class="val">#141414</span>;
+  <span class="prop">background-image</span>: <span class="val">url('image.jpg')</span>;
+}</pre>
+      </div>
+      <div class="demo-label">▶ LIVE DEMO — Alag alag colors</div>
+      <div class="demo-box">
+        <div class="color-swatches">
+          <div class="swatch" style="background:#e50914">RED<span>#e50914</span></div>
+          <div class="swatch" style="background:#f08804">ORANGE<span>#f08804</span></div>
+          <div class="swatch" style="background:#46d369">GREEN<span>#46d369</span></div>
+          <div class="swatch" style="background:#54b3d6">BLUE<span>#54b3d6</span></div>
+          <div class="swatch" style="background:#f5c518">YELLOW<span>#f5c518</span></div>
+          <div class="swatch" style="background:rgba(229,9,20,0.4)">RGBA<span>40% opacity</span></div>
+        </div>
+      </div>
+      <button class="mark-done-btn" onclick="markDone(1,this)">✓ Done – Samajh aa gaya</button>
+    </section>
+    <hr class="divider"/>
+
+    <!-- ── 02: BOX MODEL ── -->
+    <section class="topic-section" id="topic-2" style="animation-delay:.1s">
+      <div class="topic-header">
+        <div class="topic-num">02</div>
+        <div class="topic-title-wrap">
+          <div class="topic-badge">Chapter 2 · Basics</div>
+          <div class="topic-title">Box Model</div>
+        </div>
+      </div>
+      <p class="topic-desc">CSS mein har element ek box hota hai. Ye box 4 layers se bana hai — Content, Padding, Border, aur Margin. Isko samajhna CSS ka sabse important concept hai.</p>
+      <div class="code-block">
+        <div class="code-top"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span><span class="code-lang">CSS</span></div>
+        <pre>
+<span class="sel">div</span> {
+  <span class="prop">width</span>: <span class="num2">200px</span>;
+  <span class="prop">padding</span>: <span class="num2">20px</span>;          <span class="cm">/* andar ki jagah */</span>
+  <span class="prop">border</span>: <span class="num2">2px</span> <span class="val">solid red</span>;
+  <span class="prop">margin</span>: <span class="num2">30px</span>;           <span class="cm">/* bahar ki jagah */</span>
+  <span class="prop">box-sizing</span>: <span class="val">border-box</span>; <span class="cm">/* best practice */</span>
+}</pre>
+      </div>
+      <div class="demo-label">▶ LIVE DEMO — Box Model visualize karo</div>
+      <div class="demo-box" style="flex-direction:row;align-items:center;gap:40px;flex-wrap:wrap;">
+        <div class="bm-outer">
+          <div class="bm-border">
+            <div class="bm-padding">
+              <div class="bm-content">Content</div>
+            </div>
+          </div>
+        </div>
+        <div class="bm-labels">
+          <div><span class="bm-dot" style="background:rgba(240,136,4,0.5);border:1px dashed var(--orange)"></span><span style="color:var(--orange)">Margin</span> — bahar ki jagah</div>
+          <div><span class="bm-dot" style="background:rgba(84,179,214,0.5);border:1px dashed var(--blue)"></span><span style="color:var(--blue)">Border</span> — outer line</div>
+          <div><span class="bm-dot" style="background:rgba(70,211,105,0.5);border:1px dashed var(--green)"></span><span style="color:var(--green)">Padding</span> — andar ki jagah</div>
+          <div><span class="bm-dot" style="background:var(--red)"></span><span style="color:var(--red)">Content</span> — actual content</div>
+        </div>
+      </div>
+      <button class="mark-done-btn" onclick="markDone(2,this)">✓ Done – Samajh aa gaya</button>
+    </section>
+    <hr class="divider"/>
+
+    <!-- ── 03: TYPOGRAPHY ── -->
+    <section class="topic-section" id="topic-3" style="animation-delay:.15s">
+      <div class="topic-header">
+        <div class="topic-num">03</div>
+        <div class="topic-title-wrap">
+          <div class="topic-badge">Chapter 3 · Text</div>
+          <div class="topic-title">Typography</div>
+        </div>
+      </div>
+      <p class="topic-desc">Text ko style karna — font, size, weight, line-height, alignment. Ye sab CSS typography ke andar aata hai.</p>
+      <div class="code-block">
+        <div class="code-top"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span><span class="code-lang">CSS</span></div>
+        <pre>
+<span class="sel">p</span> {
+  <span class="prop">font-family</span>: <span class="val">'DM Sans', sans-serif</span>;
+  <span class="prop">font-size</span>: <span class="num2">16px</span>;
+  <span class="prop">font-weight</span>: <span class="num2">400</span>;        <span class="cm">/* 100–900 */</span>
+  <span class="prop">line-height</span>: <span class="num2">1.6</span>;
+  <span class="prop">letter-spacing</span>: <span class="num2">1px</span>;
+  <span class="prop">text-align</span>: <span class="val">center</span>;
+  <span class="prop">text-transform</span>: <span class="val">uppercase</span>;
+  <span class="prop">text-decoration</span>: <span class="val">underline</span>;
+}</pre>
+      </div>
+      <div class="demo-label">▶ LIVE DEMO</div>
+      <div class="demo-box" style="flex-direction:column;align-items:flex-start;">
+        <div class="typo-demo">
+          <div class="typo-row"><span class="typo-tag">font-size: 32px</span><span style="font-size:32px;color:#fff">Bada Text</span></div>
+          <div class="typo-row"><span class="typo-tag">font-weight: 700</span><span style="font-weight:700;color:#fff">Bold Text</span></div>
+          <div class="typo-row"><span class="typo-tag">font-weight: 300</span><span style="font-weight:300;color:#fff">Light Text</span></div>
+          <div class="typo-row"><span class="typo-tag">letter-spacing</span><span style="letter-spacing:6px;color:var(--blue)">SPACED OUT</span></div>
+          <div class="typo-row"><span class="typo-tag">text-transform</span><span style="text-transform:uppercase;color:var(--red)">uppercase ho gaya</span></div>
+          <div class="typo-row"><span class="typo-tag">text-decoration</span><span style="text-decoration:underline;color:var(--green)">Underlined text</span></div>
+        </div>
+      </div>
+      <button class="mark-done-btn" onclick="markDone(3,this)">✓ Done – Samajh aa gaya</button>
+    </section>
+    <hr class="divider"/>
+
+    <!-- ── 04: SELECTORS ── -->
+    <section class="topic-section" id="topic-4" style="animation-delay:.2s">
+      <div class="topic-header">
+        <div class="topic-num">04</div>
+        <div class="topic-title-wrap">
+          <div class="topic-badge">Chapter 4 · Selectors</div>
+          <div class="topic-title">CSS Selectors</div>
+        </div>
+      </div>
+      <p class="topic-desc">Selectors se hum batate hain CSS kis element pe lagegi. Element, class, id, pseudo-class — sab hain yahan.</p>
+      <div class="code-block">
+        <div class="code-top"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span><span class="code-lang">CSS</span></div>
+        <pre>
+<span class="sel">p</span>               { } <span class="cm">/* element selector */</span>
+<span class="sel">.myClass</span>       { } <span class="cm">/* class selector */</span>
+<span class="sel">#myId</span>          { } <span class="cm">/* id selector */</span>
+<span class="sel">*</span>               { } <span class="cm">/* sabko select karo */</span>
+<span class="sel">p:first-child</span>   { } <span class="cm">/* pehla element */</span>
+<span class="sel">li:nth-child(odd)</span> { } <span class="cm">/* odd wale */</span>
+<span class="sel">a:hover</span>         { } <span class="cm">/* mouse aane pe */</span>
+<span class="sel">div > p</span>         { } <span class="cm">/* direct child */</span></pre>
+      </div>
+      <div class="demo-label">▶ LIVE DEMO — Last row pe hover karo</div>
+      <div class="demo-box" style="flex-direction:column;width:100%;align-items:stretch;">
+        <div class="sel-demo">
+          <div class="sel-row sel-first">:first-child — Ye pehla element hai (red color)</div>
+          <div class="sel-row sel-odd">:nth-child(odd) — Ye odd number hai (blue)</div>
+          <div class="sel-row">Normal row</div>
+          <div class="sel-row sel-odd">:nth-child(odd) — Odd row (blue)</div>
+          <div class="sel-row sel-hover-demo">:hover — Is pe mouse laao! (green ho jaayega)</div>
+        </div>
+      </div>
+      <button class="mark-done-btn" onclick="markDone(4,this)">✓ Done – Samajh aa gaya</button>
+    </section>
+    <hr class="divider"/>
+
+    <!-- ── 05: FLEXBOX ── -->
+    <section class="topic-section" id="topic-5" style="animation-delay:.05s">
+      <div class="topic-header">
+        <div class="topic-num">05</div>
+        <div class="topic-title-wrap">
+          <div class="topic-badge">Chapter 5 · Layout</div>
+          <div class="topic-title">Flexbox</div>
+        </div>
+      </div>
+      <p class="topic-desc">Flexbox se elements ko row ya column mein arrange karna bahut aasaan ho jaata hai. Center karna, gap dena, wrap karna — sab kuch 1 line mein.</p>
+      <div class="code-block">
+        <div class="code-top"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span><span class="code-lang">CSS</span></div>
+        <pre>
+<span class="sel">.container</span> {
+  <span class="prop">display</span>: <span class="val">flex</span>;
+  <span class="prop">flex-direction</span>: <span class="val">row</span>;        <span class="cm">/* row | column */</span>
+  <span class="prop">justify-content</span>: <span class="val">center</span>;   <span class="cm">/* horizontal */</span>
+  <span class="prop">align-items</span>: <span class="val">center</span>;       <span class="cm">/* vertical */</span>
+  <span class="prop">gap</span>: <span class="num2">16px</span>;
+  <span class="prop">flex-wrap</span>: <span class="val">wrap</span>;
+}</pre>
+      </div>
+      <div class="demo-label">▶ LIVE DEMO — Hover karo items pe</div>
+      <div class="demo-box" style="flex-direction:column;gap:16px;width:100%;">
+        <div style="font-size:12px;color:var(--muted)">justify-content: center + gap: 10px</div>
+        <div class="flex-demo">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+        </div>
+      </div>
+      <button class="mark-done-btn" onclick="markDone(5,this)">✓ Done – Samajh aa gaya</button>
+    </section>
+    <hr class="divider"/>
+
+    <!-- ── 06: GRID ── -->
+    <section class="topic-section" id="topic-6" style="animation-delay:.1s">
+      <div class="topic-header">
+        <div class="topic-num">06</div>
+        <div class="topic-title-wrap">
+          <div class="topic-badge">Chapter 6 · Layout</div>
+          <div class="topic-title">CSS Grid</div>
+        </div>
+      </div>
+      <p class="topic-desc">Grid se 2D layout banate hain — rows aur columns dono control hote hain. Dashboard, gallery, complex layouts ke liye perfect.</p>
+      <div class="code-block">
+        <div class="code-top"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span><span class="code-lang">CSS</span></div>
+        <pre>
+<span class="sel">.grid</span> {
+  <span class="prop">display</span>: <span class="val">grid</span>;
+  <span class="prop">grid-template-columns</span>: <span class="val">repeat(3, 1fr)</span>;
+  <span class="prop">gap</span>: <span class="num2">16px</span>;
+}
+<span class="sel">.item-wide</span> {
+  <span class="prop">grid-column</span>: <span class="val">span 2</span>;
+}</pre>
+      </div>
+      <div class="demo-label">▶ LIVE DEMO — 3 column grid</div>
+      <div class="demo-box" style="width:100%;padding:20px 16px;">
+        <div class="grid-demo" style="width:100%">
+          <div class="grid-item span2">Wide Item (span 2)</div>
+          <div class="grid-item">Item 2</div>
+          <div class="grid-item">Item 3</div>
+          <div class="grid-item">Item 4</div>
+          <div class="grid-item">Item 5</div>
+        </div>
+      </div>
+      <button class="mark-done-btn" onclick="markDone(6,this)">✓ Done – Samajh aa gaya</button>
+    </section>
+    <hr class="divider"/>
+
+    <!-- ── 07: POSITION ── -->
+    <section class="topic-section" id="topic-7" style="animation-delay:.15s">
+      <div class="topic-header">
+        <div class="topic-num">07</div>
+        <div class="topic-title-wrap">
+          <div class="topic-badge">Chapter 7 · Position</div>
+          <div class="topic-title">CSS Position</div>
+        </div>
+      </div>
+      <p class="topic-desc">Position property se elements ko exactly kahan rakhna hai wo control karte hain. 5 types hote hain — static, relative, absolute, fixed, sticky.</p>
+      <div class="code-block">
+        <div class="code-top"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span><span class="code-lang">CSS</span></div>
+        <pre>
+<span class="prop">position</span>: <span class="val">static</span>;   <span class="cm">/* default */</span>
+<span class="prop">position</span>: <span class="val">relative</span>; <span class="cm">/* apni jagah se shift */</span>
+<span class="prop">position</span>: <span class="val">absolute</span>; <span class="cm">/* parent ke andar */</span>
+<span class="prop">position</span>: <span class="val">fixed</span>;    <span class="cm">/* viewport mein fixed */</span>
+<span class="prop">position</span>: <span class="val">sticky</span>;   <span class="cm">/* scroll hone tak relative */</span>
+<span class="prop">top</span>: <span class="num2">20px</span>; <span class="prop">left</span>: <span class="num2">30px</span>;</pre>
+      </div>
+      <div class="demo-label">▶ LIVE DEMO</div>
+      <div class="demo-box" style="width:100%;flex-direction:column;align-items:flex-start;padding:0;">
+        <div class="pos-demo">
+          <div class="pos-box pos-static">static</div>
+          <div class="pos-box pos-relative">relative</div>
+          <div class="pos-box pos-absolute">absolute</div>
+        </div>
+      </div>
+      <button class="mark-done-btn" onclick="markDone(7,this)">✓ Done – Samajh aa gaya</button>
+    </section>
+    <hr class="divider"/>
+
+    <!-- ── 08: TRANSITIONS ── -->
+    <section class="topic-section" id="topic-8" style="animation-delay:.05s">
+      <div class="topic-header">
+        <div class="topic-num">08</div>
+        <div class="topic-title-wrap">
+          <div class="topic-badge">Chapter 8 · Motion</div>
+          <div class="topic-title">Transitions</div>
+        </div>
+      </div>
+      <p class="topic-desc">Transition ek property se doosri property mein smoothly jaane ka effect hai. Hover pe color change, size change — sab smooth ho jaata hai.</p>
+      <div class="code-block">
+        <div class="code-top"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span><span class="code-lang">CSS</span></div>
+        <pre>
+<span class="sel">button</span> {
+  <span class="prop">background</span>: <span class="val">red</span>;
+  <span class="prop">transition</span>: <span class="val">background</span> <span class="num2">0.3s</span> <span class="val">ease</span>;
+}
+<span class="sel">button:hover</span> { <span class="prop">background</span>: <span class="val">darkred</span>; }
+<span class="cm">/* Shorthand */</span>
+<span class="prop">transition</span>: <span class="val">all</span> <span class="num2">0.4s</span> <span class="val">ease-in-out</span>;</pre>
+      </div>
+      <div class="demo-label">▶ LIVE DEMO — Har card pe hover karo</div>
+      <div class="demo-box">
+        <div class="transition-cards">
+          <div class="t-card t1">Color<br/>change</div>
+          <div class="t-card t2">Scale +<br/>Rotate</div>
+          <div class="t-card t3">Border<br/>Radius</div>
+          <div class="t-card t4">All<br/>together</div>
+        </div>
+      </div>
+      <button class="mark-done-btn" onclick="markDone(8,this)">✓ Done – Samajh aa gaya</button>
+    </section>
+    <hr class="divider"/>
+
+    <!-- ── 09: ANIMATIONS ── -->
+    <section class="topic-section" id="topic-9" style="animation-delay:.1s">
+      <div class="topic-header">
+        <div class="topic-num">09</div>
+        <div class="topic-title-wrap">
+          <div class="topic-badge">Chapter 9 · Motion</div>
+          <div class="topic-title">Animations</div>
+        </div>
+      </div>
+      <p class="topic-desc">@keyframes se apni custom animation banao. Spin, bounce, pulse, shake — sab CSS se hi hota hai, JavaScript ki zaroorat nahi!</p>
+      <div class="code-block">
+        <div class="code-top"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span><span class="code-lang">CSS</span></div>
+        <pre>
+<span class="sel">@keyframes</span> <span class="val">bounce</span> {
+  <span class="num2">0%</span>, <span class="num2">100%</span> { <span class="prop">transform</span>: <span class="val">translateY(0)</span>; }
+  <span class="num2">50%</span>       { <span class="prop">transform</span>: <span class="val">translateY(-20px)</span>; }
+}
+<span class="sel">.box</span> {
+  <span class="prop">animation</span>: <span class="val">bounce</span> <span class="num2">1s</span> <span class="val">ease-in-out infinite</span>;
+}</pre>
+      </div>
+      <div class="demo-label">▶ LIVE DEMO — Auto chalta rehega</div>
+      <div class="demo-box">
+        <div class="anim-demos">
+          <div style="text-align:center">
+            <div class="anim-box anim-spin">Spin</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:8px">rotate(360deg)</div>
+          </div>
+          <div style="text-align:center">
+            <div class="anim-box anim-bounce" style="background:var(--blue)">Bounce</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:8px">translateY</div>
+          </div>
+          <div style="text-align:center">
+            <div class="anim-box anim-pulse" style="background:var(--green);color:#000">Pulse</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:8px">scale(1.2)</div>
+          </div>
+          <div style="text-align:center">
+            <div class="anim-box anim-shake" style="background:var(--orange)">Shake</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:8px">translateX</div>
+          </div>
+        </div>
+      </div>
+      <button class="mark-done-btn" onclick="markDone(9,this)">✓ Done – Samajh aa gaya</button>
+    </section>
+    <hr class="divider"/>
+
+    <!-- ── 10: BORDERS & SHADOWS ── -->
+    <section class="topic-section" id="topic-10" style="animation-delay:.15s">
+      <div class="topic-header">
+        <div class="topic-num">10</div>
+        <div class="topic-title-wrap">
+          <div class="topic-badge">Chapter 10 · Styling</div>
+          <div class="topic-title">Borders & Box Shadow</div>
+        </div>
+      </div>
+      <p class="topic-desc">Border se element ke around line lagao. Box-shadow se 3D depth effect aata hai. Border-radius se corners round hote hain.</p>
+      <div class="code-block">
+        <div class="code-top"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span><span class="code-lang">CSS</span></div>
+        <pre>
+<span class="sel">div</span> {
+  <span class="prop">border</span>: <span class="num2">2px</span> <span class="val">solid red</span>;
+  <span class="prop">border-radius</span>: <span class="num2">10px</span>;
+  <span class="prop">border-radius</span>: <span class="num2">50%</span>;     <span class="cm">/* circle! */</span>
+  <span class="prop">box-shadow</span>: <span class="num2">0 4px 20px</span> <span class="val">rgba(0,0,0,0.5)</span>;
+  <span class="prop">box-shadow</span>: <span class="num2">0 0 0 3px</span> <span class="val">red</span>; <span class="cm">/* glow */</span>
+}</pre>
+      </div>
+      <div class="demo-label">▶ LIVE DEMO</div>
+      <div class="demo-box" style="flex-direction:column;gap:20px;">
+        <div class="border-demos">
+          <div class="bd" style="border:2px solid var(--red);">solid</div>
+          <div class="bd" style="border:2px dashed var(--blue);">dashed</div>
+          <div class="bd" style="border:2px dotted var(--green);">dotted</div>
+          <div class="bd" style="border:2px solid var(--orange);border-radius:50%;width:70px;height:70px;">circle</div>
+          <div class="bd" style="border:2px solid var(--yellow);border-radius:20px;">rounded</div>
+        </div>
+        <div class="shadow-demos">
+          <div class="sh" style="box-shadow:0 4px 20px rgba(229,9,20,0.5)">Red<br/>Shadow</div>
+          <div class="sh" style="box-shadow:0 0 0 3px var(--blue)">Glow<br/>Outline</div>
+          <div class="sh" style="box-shadow:8px 8px 0 var(--red)">Hard<br/>Shadow</div>
+          <div class="sh" style="box-shadow:0 20px 40px rgba(0,0,0,0.8)">Deep<br/>Shadow</div>
+        </div>
+      </div>
+      <button class="mark-done-btn" onclick="markDone(10,this)">✓ Done – Samajh aa gaya</button>
+    </section>
+    <hr class="divider"/>
+
+    <!-- ── 11: GRADIENTS ── -->
+    <section class="topic-section" id="topic-11" style="animation-delay:.05s">
+      <div class="topic-header">
+        <div class="topic-num">11</div>
+        <div class="topic-title-wrap">
+          <div class="topic-badge">Chapter 11 · Visuals</div>
+          <div class="topic-title">Gradients</div>
+        </div>
+      </div>
+      <p class="topic-desc">Gradient se ek color se doosre color mein smoothly transition hota hai. Linear (seedha), radial (circle mein) — dono type hote hain.</p>
+      <div class="code-block">
+        <div class="code-top"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span><span class="code-lang">CSS</span></div>
+        <pre>
+<span class="cm">/* Linear Gradient */</span>
+<span class="prop">background</span>: <span class="val">linear-gradient(to right, red, blue)</span>;
+<span class="prop">background</span>: <span class="val">linear-gradient(135deg, #e50914, #f08804)</span>;
+
+<span class="cm">/* Radial Gradient */</span>
+<span class="prop">background</span>: <span class="val">radial-gradient(circle, red, black)</span>;
+
+<span class="cm">/* Multiple stops */</span>
+<span class="prop">background</span>: <span class="val">linear-gradient(to bottom, #e50914 0%, #141414 100%)</span>;</pre>
+      </div>
+      <div class="demo-label">▶ LIVE DEMO</div>
+      <div class="demo-box">
+        <div class="grad-demos">
+          <div class="grad" style="background:linear-gradient(135deg,#e50914,#f08804)">Red → Orange</div>
+          <div class="grad" style="background:linear-gradient(135deg,#1a237e,#54b3d6)">Blue</div>
+          <div class="grad" style="background:linear-gradient(to bottom,#46d369,#141414)">Green</div>
+          <div class="grad" style="background:radial-gradient(circle,#f5c518,#e50914)">Radial</div>
+          <div class="grad" style="background:linear-gradient(45deg,#e50914,#c678dd,#54b3d6)">3 Colors</div>
+        </div>
+      </div>
+      <button class="mark-done-btn" onclick="markDone(11,this)">✓ Done – Samajh aa gaya</button>
+    </section>
+    <hr class="divider"/>
+
+    <!-- ── 12: MEDIA QUERIES ── -->
+    <section class="topic-section" id="topic-12" style="animation-delay:.1s">
+      <div class="topic-header">
+        <div class="topic-num">12</div>
+        <div class="topic-title-wrap">
+          <div class="topic-badge">Chapter 12 · Responsive</div>
+          <div class="topic-title">Media Queries</div>
+        </div>
+      </div>
+      <p class="topic-desc">Media queries se website responsive banti hai — mobile pe alag style, tablet pe alag, desktop pe alag. Aajkal har website mein ye hona chahiye.</p>
+      <div class="code-block">
+        <div class="code-top"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span><span class="code-lang">CSS</span></div>
+        <pre>
+<span class="cm">/* Mobile first */</span>
+<span class="sel">.container</span> { <span class="prop">width</span>: <span class="num2">100%</span>; }
+
+<span class="sel">@media (min-width: 768px)</span> {
+  <span class="sel">.container</span> { <span class="prop">width</span>: <span class="num2">720px</span>; }
+}
+<span class="sel">@media (min-width: 1024px)</span> {
+  <span class="sel">.container</span> { <span class="prop">width</span>: <span class="num2">960px</span>; }
+}
+<span class="sel">@media (prefers-color-scheme: dark)</span> {
+  <span class="prop">background</span>: <span class="val">#141414</span>;
+}</pre>
+      </div>
+      <div class="demo-label">▶ LIVE DEMO — Browser window resize karo</div>
+      <div class="demo-box">
+        <div class="mq-demo" style="width:100%">
+          <div class="mq-indicator" id="mq-indicator">🖥️ Desktop</div>
+          <div class="mq-text" id="mq-text">Window width: <strong id="mq-width"></strong>px</div>
+        </div>
+      </div>
+      <button class="mark-done-btn" onclick="markDone(12,this)">✓ Done – Samajh aa gaya</button>
+    </section>
+
+    <!-- COMPLETION MESSAGE -->
+    <div id="completion-msg" style="display:none;text-align:center;padding:48px 24px;background:var(--surface);border-radius:16px;border:1px solid var(--green);margin-bottom:40px;">
+      <div style="font-size:60px;margin-bottom:16px">🎉</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--green);letter-spacing:2px">MUBARAK HO!</div>
+      <p style="color:var(--muted);margin-top:12px;font-size:16px">Tumne CSS A to Z complete kar li. Ab tum apna koi bhi webpage design kar sakte ho!</p>
+    </div>
+
+  </div><!-- /main-content -->
+</div><!-- /learn-layout -->
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="f-logo">CSS SIKHO</div>
+  <p>Made with <span class="heart">♥</span> — Dekhkar Seekho, Samjhkar Banao</p>
+  <p style="margin-top:8px;font-size:12px;color:#555">© CSS Sikho — Free for everyone</p>
+</footer>
+
+<!-- JavaScript File -->
+<script src="script.js"></script>
+
+</body>
+</html>
